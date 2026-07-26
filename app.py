@@ -1499,7 +1499,8 @@ page = st.sidebar.radio(
         "💼 Job Matching",
         "📊 Skill Gap Analysis",
         "📈 ATS Analysis",
-        "📥 Reports"
+        "📑 Reports",
+        "ℹ️ About ResumeIQ"
     ]
 )
 
@@ -2537,7 +2538,73 @@ if page == "📥 Reports":
                 "ATS Score",
                 f"{best_job['ats_score']:.2f}%"
             )
+elif page == "ℹ️ About ResumeIQ":
+    st.title("ℹ️ About ResumeIQ")
 
+    st.markdown("""
+    ## ResumeIQ
+
+    **AI-Powered Resume Analysis & Job Matching Platform**
+
+    ResumeIQ is an intelligent career assistance platform designed to help
+    job seekers analyze their resumes, understand their strengths, identify
+    missing skills, evaluate ATS compatibility, and discover relevant job
+    opportunities.
+
+    ### 🚀 Key Features
+
+    - 📄 Resume PDF Analysis
+    - 💼 Job Matching
+    - 📊 Skill Gap Analysis
+    - 📈 ATS Compatibility Analysis
+    - 📑 Professional PDF Reports
+    - 🎯 Resume Quality Scoring
+    - 🔍 Matched and Missing Skill Detection
+    - 💡 Personalized Skill Improvement Recommendations
+
+    ### 🛠️ Technologies Used
+
+    - Python
+    - Streamlit
+    - PyMuPDF
+    - Pandas
+    - NumPy
+    - Scikit-learn
+    - Plotly
+    - Python-docx
+    - OpenPyXL
+    - ReportLab
+
+    ### 🔄 How ResumeIQ Works
+
+    1. Upload your resume in PDF format.
+    2. ResumeIQ extracts and analyzes the resume content.
+    3. The system identifies important resume sections and skills.
+    4. Job descriptions are compared with the candidate profile.
+    5. Missing skills and skill gaps are identified.
+    6. ATS compatibility is evaluated.
+    7. A detailed report with recommendations is generated.
+
+    ### 🎓 Project Information
+
+    **Project:** ResumeIQ
+
+    **Type:** B.Tech Computer Science Engineering Project
+
+    **Purpose:** AI-powered resume analysis and job matching
+
+    **Version:** 1.0
+
+    ### 👨‍💻 Project Status
+
+    ✅ Successfully deployed and publicly accessible
+
+    ---
+    
+    **ResumeIQ v1.0**
+
+    AI-Powered Resume Analysis & Job Matching Platform
+    """)
 
 st.markdown(
     """
