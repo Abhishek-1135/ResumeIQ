@@ -1,4 +1,8 @@
 streamlit
 PyMuPDF
+pandas
+numpy
 scikit-learn
-reportlab
+plotly
+python-docx
+openpyxl
