@@ -22,7 +22,6 @@ ResumeIQ is an AI-powered resume analysis and job matching platform built using 
 
 streamlit
 PyMuPDF
-pandas
 numpy
 scikit-learn
 plotly
