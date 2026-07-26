@@ -1569,128 +1569,110 @@ if "recommended_roles" not in st.session_state:
 
 
 if page == "🏠 Dashboard":
+    st.title("🚀 Welcome to ResumeIQ")
 
-    st.header(
-        "👋 Welcome to ResumeIQ"
-    )
+    st.subheader("AI-Powered Resume Analysis & Job Matching Platform")
 
     st.write(
-        "Analyze your resume and discover the jobs "
-        "that best match your skills."
+        "ResumeIQ helps you analyze your resume, evaluate job compatibility, "
+        "identify skill gaps, check ATS compatibility, and generate detailed "
+        "career recommendations."
     )
 
-    col1, col2, col3, col4 = st.columns(4)
+    st.divider()
+
+    st.header("🎯 What Can ResumeIQ Do?")
+
+    col1, col2 = st.columns(2)
 
     with col1:
+        st.subheader("📄 Resume Analysis")
+        st.write(
+            "Analyze your resume and identify important sections, skills, "
+            "education, experience, projects, and certifications."
+        )
 
-        st.metric(
-            "📄 Resume Analysis",
-            "Ready"
+        st.subheader("📊 Skill Gap Analysis")
+        st.write(
+            "Discover missing skills and get personalized recommendations "
+            "to improve your career profile."
         )
 
     with col2:
-
-        st.metric(
-            "💼 Job Matching",
-            "Ready"
+        st.subheader("💼 Job Matching")
+        st.write(
+            "Compare your resume with a job description and understand "
+            "how well your skills match the role."
         )
 
-    with col3:
-
-        st.metric(
-            "🎯 Skill Gap",
-            "Ready"
-        )
-
-    with col4:
-
-        st.metric(
-            "📊 ATS Analysis",
-            "Ready"
+        st.subheader("📈 ATS Analysis")
+        st.write(
+            "Evaluate your resume for ATS compatibility and identify areas "
+            "that can be improved."
         )
 
     st.divider()
 
-    st.subheader(
-        "🚀 How ResumeIQ Works"
-    )
+    st.header("🔄 How ResumeIQ Works")
 
     step1, step2, step3, step4 = st.columns(4)
 
     with step1:
-
-        st.markdown(
-            "### 1️⃣ Upload"
-        )
-
-        st.write(
-            "Upload your resume in PDF format."
-        )
+        st.subheader("1️⃣ Upload")
+        st.write("Upload your resume in PDF format.")
 
     with step2:
-
-        st.markdown(
-            "### 2️⃣ Analyze"
-        )
-
-        st.write(
-            "ResumeIQ extracts and analyzes your resume."
-        )
+        st.subheader("2️⃣ Analyze")
+        st.write("ResumeIQ extracts and analyzes your resume content.")
 
     with step3:
-
-        st.markdown(
-            "### 3️⃣ Match"
-        )
-
-        st.write(
-            "Compare your profile against job descriptions."
-        )
+        st.subheader("3️⃣ Compare")
+        st.write("Compare your resume with a target job description.")
 
     with step4:
+        st.subheader("4️⃣ Improve")
+        st.write("Get skill gap insights and personalized recommendations.")
 
-        st.markdown(
-            "### 4️⃣ Improve"
-        )
+    st.divider()
 
-        st.write(
-            "Discover skills and gaps relevant to your target roles."
-        )
+    st.header("🛠️ Technologies Used")
 
-    if st.session_state.analysis_done:
+    tech_col1, tech_col2, tech_col3, tech_col4 = st.columns(4)
 
-        st.divider()
+    with tech_col1:
+        st.write("🐍 Python")
+        st.write("⚡ Streamlit")
 
-        st.subheader(
-            "📊 Latest Analysis"
-        )
+    with tech_col2:
+        st.write("📄 PyMuPDF")
+        st.write("📊 Pandas")
 
-        best_job = st.session_state.best_job
+    with tech_col3:
+        st.write("🤖 Scikit-learn")
+        st.write("🔢 NumPy")
 
-        col1, col2, col3 = st.columns(3)
+    with tech_col4:
+        st.write("📈 Plotly")
+        st.write("📑 ReportLab")
 
-        with col1:
+    st.divider()
 
-            st.metric(
-                "🏆 Best Job",
-                best_job[
-                    "job_name"
-                ]
-            )
+    st.header("🚀 Start Using ResumeIQ")
 
-        with col2:
+    st.write(
+        "Use the sidebar to navigate through Resume Analysis, Job Matching, "
+        "Skill Gap Analysis, ATS Analysis, and Reports."
+    )
 
-            st.metric(
-                "🎯 Match Score",
-                f"{best_job['overall_score']:.2f}%"
-            )
+    st.info(
+        "💡 Tip: Start by uploading your resume in the Resume Analysis section."
+    )
 
-        with col3:
+    st.divider()
 
-            st.metric(
-                "📄 ATS Score",
-                f"{best_job['ats_score']:.2f}%"
-            )
+    st.caption(
+        "ResumeIQ v1.0 | AI-Powered Resume Analysis & Job Matching Platform"
+    )
 
 
 if page == "📄 Resume Analysis":
