@@ -1,5 +1,5 @@
 import streamlit as st
-import 
+import pymupdf 
 import re
 from io import BytesIO
 
@@ -283,7 +283,7 @@ def extract_text_from_pdf(uploaded_file):
 
     pdf_bytes = uploaded_file.read()
 
-    document = .open(
+    document = pymupdf.open(
         stream=pdf_bytes,
         filetype="pdf"
     )
