@@ -1574,41 +1574,36 @@ if page == "🏠 Dashboard":
     st.subheader("AI-Powered Resume Analysis & Job Matching Platform")
 
     st.write(
-        "ResumeIQ helps you analyze your resume, evaluate job compatibility, "
-        "identify skill gaps, check ATS compatibility, and generate detailed "
-        "career recommendations."
+        "ResumeIQ helps you analyze your resume, evaluate its quality, "
+        "identify skill gaps, check ATS compatibility, and understand "
+        "how well your profile matches a job description."
     )
 
     st.divider()
 
     st.header("🎯 What Can ResumeIQ Do?")
 
-    col1, col2 = st.columns(2)
+    col1, col2, col3 = st.columns(3)
 
     with col1:
-        st.subheader("📄 Resume Analysis")
+        st.metric("📄 Resume Analysis", "AI Powered")
         st.write(
-            "Analyze your resume and identify important sections, skills, "
-            "education, experience, projects, and certifications."
-        )
-
-        st.subheader("📊 Skill Gap Analysis")
-        st.write(
-            "Discover missing skills and get personalized recommendations "
-            "to improve your career profile."
+            "Analyze your resume content, sections, skills, "
+            "education, experience, and projects."
         )
 
     with col2:
-        st.subheader("💼 Job Matching")
+        st.metric("💼 Job Matching", "Smart Matching")
         st.write(
-            "Compare your resume with a job description and understand "
-            "how well your skills match the role."
+            "Compare your resume with job descriptions and "
+            "identify matched and missing skills."
         )
 
-        st.subheader("📈 ATS Analysis")
+    with col3:
+        st.metric("📈 ATS Analysis", "Compatibility")
         st.write(
-            "Evaluate your resume for ATS compatibility and identify areas "
-            "that can be improved."
+            "Evaluate your resume for ATS compatibility and "
+            "identify areas that can be improved."
         )
 
     st.divider()
@@ -1623,11 +1618,11 @@ if page == "🏠 Dashboard":
 
     with step2:
         st.subheader("2️⃣ Analyze")
-        st.write("ResumeIQ extracts and analyzes your resume content.")
+        st.write("ResumeIQ extracts and analyzes your resume.")
 
     with step3:
         st.subheader("3️⃣ Compare")
-        st.write("Compare your resume with a target job description.")
+        st.write("Compare your profile with a target job description.")
 
     with step4:
         st.subheader("4️⃣ Improve")
@@ -1635,39 +1630,52 @@ if page == "🏠 Dashboard":
 
     st.divider()
 
-    st.header("🛠️ Technologies Used")
+    st.header("🛠️ Technology Stack")
 
-    tech_col1, tech_col2, tech_col3, tech_col4 = st.columns(4)
+    tech_col1, tech_col2 = st.columns(2)
 
     with tech_col1:
         st.write("🐍 Python")
-        st.write("⚡ Streamlit")
-
-    with tech_col2:
+        st.write("🎈 Streamlit")
         st.write("📄 PyMuPDF")
         st.write("📊 Pandas")
-
-    with tech_col3:
-        st.write("🤖 Scikit-learn")
         st.write("🔢 NumPy")
 
-    with tech_col4:
+    with tech_col2:
+        st.write("🤖 Scikit-learn")
         st.write("📈 Plotly")
+        st.write("📝 Python-docx")
+        st.write("📊 OpenPyXL")
         st.write("📑 ReportLab")
 
     st.divider()
 
-    st.header("🚀 Start Using ResumeIQ")
+    st.header("⭐ Key Features")
 
-    st.write(
-        "Use the sidebar to navigate through Resume Analysis, Job Matching, "
-        "Skill Gap Analysis, ATS Analysis, and Reports."
-    )
+    features = [
+        "Resume PDF Analysis",
+        "Resume Quality Scoring",
+        "Job Match Analysis",
+        "Semantic Similarity Analysis",
+        "Skill Gap Detection",
+        "ATS Compatibility Analysis",
+        "Personalized Skill Recommendations",
+        "Professional PDF Reports"
+    ]
+
+    for feature in features:
+        st.write(f"✅ {feature}")
+
+    st.divider()
 
     st.info(
-        "💡 Tip: Start by uploading your resume in the Resume Analysis section."
+        "💡 Tip: For the best results, upload a complete resume "
+        "and provide a detailed job description."
     )
 
+    st.success(
+        "🚀 ResumeIQ is successfully deployed and ready to use!"
+    )
     st.divider()
 
     st.caption(
