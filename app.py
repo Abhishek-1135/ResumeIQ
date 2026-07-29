@@ -20,7 +20,7 @@ from reportlab.lib.enums import TA_CENTER
 
 
 st.set_page_config(
-    page_title="ResumeIQ",
+    page_title="ResumeIQ | AI Resume Assistant",
     page_icon="📄",
     layout="wide",
     initial_sidebar_state="expanded"
@@ -1481,11 +1481,11 @@ st.markdown(
 st.divider()
 
 
-st.sidebar.title(
-    "📄 ResumeIQ"
+st.sidebar.markdown(
+    "# 📄 ResumeIQ"
 )
 
-st.sidebar.write(
+st.sidebar.caption(
     "Your Intelligent Resume Assistant"
 )
 
